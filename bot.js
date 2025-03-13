@@ -12,6 +12,7 @@ const bot = new Telegraf("7767894948:AAGPJ1cQuPCOn42XjgzL3b9YSS06n9Kh1ek");
 const ALLOWED_USERS = [
   // Add your Telegram user ID and other authorized users
   // Example: 123456789
+  866255498,
 ];
 
 // Check if user is authorized
