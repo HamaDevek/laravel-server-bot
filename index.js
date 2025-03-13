@@ -22,8 +22,11 @@ const isAuthorized = (ctx) => {
 
 // Middleware to check authorization
 bot.use((ctx, next) => {
+  const userId = ctx.from?.id;
   if (!isAuthorized(ctx)) {
-    return ctx.reply("⛔ You are not authorized to use this bot.");
+    return ctx.reply(
+      `⛔ You are not authorized to use this bot.\n\nYour User ID is: ${userId}\n\nPlease add this ID to the ALLOWED_USERS array in the bot code.`
+    );
   }
   return next();
 });
